@@ -1,24 +1,98 @@
-<nav>
-    <div class="nav-container">
-      <a href="/" class="nav-logo" title="Back to Homepage">Дарья Файкова</a>
-      <div class="nav-links">
-        <a href="/about" class="link">Обо мне</a>
-        <a href="/blog" class="link">Блог</a>
-        <a href="/projects" class="link">Портфолио</a>
-        <a href="/contact" class="link">Контакты</a>
-      </div>
+<svelte:head>
+    <title>Имя Фамилия</title>
+</svelte:head>
+
+<div class="container">
+    <div class="info">
+        <div class="animate-background">
+            <div class="container info-container">
+                <div class="info-text">
+                    <h1>
+                        <p class="animate-text-1">Lorem ipsum dolor sit,</p>
+                        <p class="text-2">Lorem ipsum dolor sit amet.</p>
+                    </h1>
+                </div>
+                <h2 class="subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Accusantium architecto aut, cupiditate dolores ducimus
+                    expedita labore nemo odio quibusdam quidem sapiente soluta.
+                </h2>
+                <div
+                    style="color:black"
+                    class="scroll-button animate-scroll"
+                    tabindex="0"
+                >
+                    <a href="/about">Click Here</a>
+                    <div class="arrow">→</div>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
-  
-  <div class="container">
-    <!-- Pages will be injected below -->
-    <slot></slot>
-  </div>
-  
-  <style>
-    .container {
-      max-width: 1400px;
-      margin: 50px auto;
+</div>
+
+<div class="background-div" />
+
+<style>
+    .info {
+        text-align: center;
+        position: relative;
     }
-  </style>
-  
+
+    .info-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        align-items: start;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 190px 0 0 2.5rem;
+    }
+
+    .info h1 {
+        font-size: 4rem;
+        margin: 0;
+    }
+
+    .info h1 p {
+        position: relative;
+        font: inherit;
+        margin: 0;
+        text-align: left;
+        line-height: 130%;
+        width: fit-content;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+    }
+
+    .info h2 {
+        max-width: 65ch;
+        font-weight: 200;
+        margin-top: 0.5rem;
+    }
+
+    .background-div {
+        background-color: #ecebe8;
+        width: 100%;
+        height: 56vh;
+        margin: -205px auto;
+    }
+
+    .info .info-text {
+        position: relative;
+    }
+
+    .scroll-button {
+        display: flex;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .scroll-button .arrow {
+        margin-left: 0.5rem;
+    }
+</style>
